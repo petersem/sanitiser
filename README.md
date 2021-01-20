@@ -13,7 +13,7 @@ If you wanted to publish this with the secrets removed, the add a `__SECRET` to 
 
     S_API_KEY__SECRET=abc123efg456
     SOMEVALUE=true
-    B_API_KEY_SECRET=abc123efg456
+    B_API_KEY__SECRET=abc123efg456
 
 Then run 'sanitiser .env'
 
