@@ -1,7 +1,7 @@
 # sanitiser
 Quick way to sanitise environment files for Docker
 
-takes a given file name and searches each line for `# *secret*` comment. If found, then line will be sanitised for anything after an '=' sign.
+takes a given file name and searches each variables that end in `__SECRET`. If found, then anything after an '=' sign will be sanitised.
 
 for example: unsanitised .env file
 
@@ -9,18 +9,16 @@ for example: unsanitised .env file
     SOMEVALUE=true
     B_API_KEY=abc123efg456
 
-If you wanted to publish this with the secrets removed, the add a `# *secret*` comment above any line you need sanitised
+If you wanted to publish this with the secrets removed, the add a `__SECRET` to the variable names you need sanitised
 
-    # *secret*
-    S_API_KEY=abc123efg456
+    S_API_KEY__SECRET=abc123efg456
     SOMEVALUE=true
-    # *secret*
-    B_API_KEY=abc123efg456
+    B_API_KEY_SECRET=abc123efg456
 
 Then run 'sanitiser .env'
 
 A new file will be created called '.env(sanitised)', with the following content
 
-S_API_KEY=<enter your value>
-SOMEVALUE=true
-B_API_KEY=<enter your value>
+    S_API_KEY__SECRET=<enter your value>
+    SOMEVALUE=true
+    B_API_KEY__SECRET=<enter your value>
