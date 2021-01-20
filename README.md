@@ -9,7 +9,7 @@ for example: unsanitised .env file
 SOMEVALUE=true
 B_API_KEY=abc123efg456`
 
-If you wanted to publish this with the secrets removed, the add a # %secret comment above any line you need sanitised
+If you wanted to publish this with the secrets removed, the add a `# *secret*` comment above any line you need sanitised
 
 `# %secret
 S_API_KEY=abc123efg456
