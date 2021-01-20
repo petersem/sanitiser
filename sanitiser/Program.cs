@@ -15,7 +15,7 @@ namespace sanitiser
                 Console.WriteLine("* Sanitiser Error *");
                 Console.WriteLine("Please enter a file name for processing.");
                 Console.WriteLine("----------------------------------------");
-                Console.WriteLine("Looks for any line with *secret* and then sanitises the next line for anything after an '=' sign.");
+                Console.WriteLine("Looks for any line with %secret% and then sanitises the next line for anything after an '=' sign.");
                 Environment.Exit(-1);
             }
 
@@ -28,6 +28,7 @@ namespace sanitiser
             Console.WriteLine(string.Format("Sanitised file writen as: {0}", fileName+"(sanitised)"));
         }
 
+        // write out text to new sanitised file
         static private void WriteSanitised(string fileName, string output)
         {
             try
@@ -42,6 +43,7 @@ namespace sanitiser
                 Environment.Exit(-1);
             }
         }
+
         // read file into string array
         static private string[] LoadFile(string fileName)
         {
