@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "sanitiser": {
+      "commandName": "Project",
+      "commandLineArgs": ".env"
+    }
+  }
+}
