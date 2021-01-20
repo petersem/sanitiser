@@ -21,6 +21,6 @@ Then run 'sanitiser .env'
 
 A new file will be created called '.env(sanitised)', with the following content
 
-    S_API_KEY=<enter your value>
-    SOMEVALUE=true
-    B_API_KEY=<enter your value>
+S_API_KEY=<enter your value>
+SOMEVALUE=true
+B_API_KEY=<enter your value>
