@@ -1,7 +1,7 @@
 # sanitiser
 Quick way to sanitise environment files for Docker
 
-takes a given file name and searches each line for `*secret*` comment. If found, then line will be sanitised for anything after an '=' sign.
+takes a given file name and searches each line for `# *secret*` comment. If found, then line will be sanitised for anything after an '=' sign.
 
 for example: unsanitised .env file
 
