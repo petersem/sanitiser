@@ -11,10 +11,10 @@ B_API_KEY=abc123efg456`
 
 If you wanted to publish this with the secrets removed, the add a `# *secret*` comment above any line you need sanitised
 
-`# %secret
+`# *secret*
 S_API_KEY=abc123efg456
 SOMEVALUE=true
-# %secret
+# *secret*
 B_API_KEY=abc123efg456`
 
 Then run 'sanitiser .env'
